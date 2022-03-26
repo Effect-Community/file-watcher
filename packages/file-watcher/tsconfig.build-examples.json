@@ -1,0 +1,29 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "build/examples",
+        "declarationDir": "build/examples-dts",
+        "target": "ES2021",
+        "module": "ES6",
+        "moduleResolution": "Node",
+        "incremental": true,
+        "tsBuildInfoFile": "build/tsbuildinfo/examples.tsbuildinfo",
+        "declaration": true,
+        "declarationMap": true,
+        "removeComments": false,
+        "tsPlusConfig": "../../tsplus.config.json",
+        "composite": true,
+        "rootDir": "examples"
+    },
+    "include": [
+        "examples/**/*.ts"
+    ],
+    "files": [
+        "./global.d.ts"
+    ],
+    "references": [
+        {
+            "path": "./tsconfig.build.json"
+        }
+    ]
+}

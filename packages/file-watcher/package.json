@@ -17,7 +17,7 @@
     "autofix": "yarn lint --fix",
     "tc": "yarn org:tsc --noEmit",
     "circular": "yarn org:madge --circular --no-color --no-spinner build/esm",
-    "dev": "yarn org:ts-node node/main.ts"
+    "dev": "yarn org:ts-node examples/main.ts"
   },
   "config": {
     "side": [],
@@ -27,6 +27,12 @@
     "typeDir": "./build/dts"
   },
   "peerDependencies": {
-    "@effect-ts/core": "*"
+    "@effect-ts/core": "*",
+    "@parcel/watcher": "*"
+  },
+  "peerDependenciesMeta": {
+    "@parcel/watcher": {
+      "optional": true
+    }
   }
 }

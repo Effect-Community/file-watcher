@@ -1,0 +1,32 @@
+{
+  "name": "@effect-ts/file-watcher",
+  "version": "0.0.1",
+  "repository": "https://github.com/Effect-TS/file-watcher.git",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "scripts": {
+    "clean": "yarn org:rimraf build tsbuildinfo dist",
+    "build-cjs": "yarn org:babel build/esm --config-file ./.babel.cjs.json --out-dir build/cjs --out-file-extension .js --source-maps",
+    "build-mjs": "yarn org:babel build/esm --config-file ./.babel.mjs.json --out-dir build/mjs --out-file-extension .mjs --source-maps",
+    "build-post": "yarn org:build-utils pack",
+    "build-pack": "yarn org:concurrently \"yarn build-cjs\" \"yarn build-mjs\" && yarn build-post",
+    "lint": "yarn org:eslint . --ext .ts,.tsx",
+    "autofix": "yarn lint --fix",
+    "tc": "yarn org:tsc --noEmit",
+    "circular": "yarn org:madge --circular --no-color --no-spinner build/esm",
+    "dev": "yarn org:ts-node node/main.ts"
+  },
+  "config": {
+    "side": [],
+    "modules": []
+  },
+  "tsplus": {
+    "typeDir": "./build/dts"
+  },
+  "peerDependencies": {
+    "@effect-ts/core": "*"
+  }
+}

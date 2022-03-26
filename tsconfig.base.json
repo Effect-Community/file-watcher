@@ -1,0 +1,55 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "downlevelIteration": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "declaration": true,
+        "skipLibCheck": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "preserveSymlinks": true,
+        "moduleResolution": "node",
+        "noEmit": false,
+        "lib": [
+            "ES2021"
+        ],
+        "sourceMap": true,
+        "declarationMap": true,
+        "strict": true,
+        "noImplicitReturns": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "noFallthroughCasesInSwitch": true,
+        "noEmitOnError": false,
+        "noErrorTruncation": false,
+        "allowJs": false,
+        "checkJs": false,
+        "forceConsistentCasingInFileNames": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "stripInternal": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noUncheckedIndexedAccess": true,
+        "strictNullChecks": true,
+        "baseUrl": ".",
+        "target": "ES2021",
+        "paths": {
+            "@effect-ts/file-watcher": [
+                "./packages/file-watcher/src/index.ts"
+            ],
+            "@effect-ts/file-watcher/*": [
+                "./packages/file-watcher/src/*"
+            ],
+            "@effect-ts-tests/file-watcher/*": [
+                "./packages/file-watcher/test/*"
+            ],
+        }
+    },
+    "include": [],
+    "exclude": [
+        "node_modules",
+        "build",
+        "lib"
+    ]
+}
